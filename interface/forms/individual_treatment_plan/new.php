@@ -328,6 +328,16 @@ formHeader("Form: individual_treatment_plan");
                 <input class='datepicker' type="text" name="short_goal3_discontinued" size="12" maxlength="50" value="">
                 </div>
             </div>
+            <div class="row" style="margin-top: 10px;margin-bottom: 10px;">
+                <table>
+                    <tr>
+                        <td>Consulted / reviewed the Tx plan review with child: </td>
+                        <td>Consulted / reviewed the Tx plan review with parent/guardian: </td>
+                        <td>Consulted caseworker on Tx plan review: </td>
+                    </tr>
+                </table>
+
+            </div>
             <br>
 
             <br /><br />

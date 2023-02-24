@@ -143,19 +143,19 @@ formHeader("Form: individual_treatment_plan");
                     <label style="font-weight: bold;">Frequency:</label>
                 </div>
                 <div class="col-md-2">
-                    <input type="text" name="short_goal1_frequency" size="12" maxlength="10" value="">
+                    <input type="text" name="short_goal1_frequency" size="12" maxlength="30" value="">
                 </div>
                 <div class="col-md-1">
                     <label style="font-weight: bold;">Duration:</label>
                 </div>
                 <div class="col-md-2">
-                    <input type="text" name="short_goal1_duration" size="12" maxlength="10" value="">
+                    <input type="text" name="short_goal1_duration" size="12" maxlength="30" value="">
                 </div>
                 <div class="col-md-1">
                     <label style="font-weight: bold;">Responsible:</label>
                 </div>
                 <div class="col-md-2">
-                    <input type="text" name="short_goal1_responsible" size="12" maxlength="10" value="">
+                    <input type="text" name="short_goal1_responsible" size="12" maxlength="30" value="">
                 </div>
             </div>
             <div class="row" style="margin-top: 10px;margin-bottom: 10px;">
@@ -163,13 +163,13 @@ formHeader("Form: individual_treatment_plan");
                     <label style="font-weight: bold;">Resolved Date:</label>
                 </div>
                 <div class="col-md-2">
-                    <input class='datepicker' type="text" name="short_goal1_resolved" size="12" maxlength="10" value="">
+                    <input class='datepicker' type="text" name="short_goal1_resolved" size="12" maxlength="30" value="">
                 </div>
                 <div class="col-md-1">
                     <label style="font-weight: bold;">Discontinued Date:</label>
                 </div>
                 <div class="col-md-2">
-                    <input class='datepicker' type="text" name="short_goal1_discontinued" size="12" maxlength="10" value="">
+                    <input class='datepicker' type="text" name="short_goal1_discontinued" size="12" maxlength="30" value="">
                 </div>
             </div>
             <br>
@@ -180,7 +180,7 @@ formHeader("Form: individual_treatment_plan");
                     <label style="font-weight: bold;">Date:</label>
                 </div>
                 <div class="col-md-10">
-                <input class='datepicker' type="text" name="short_goal2_date" size="12" maxlength="10" value="">
+                <input class='datepicker' type="text" name="short_goal2_date" size="12" maxlength="30" value="">
                 </div>
                 <div class="col-md-2">
                     <label style="font-weight: bold;">Goal 2:</label>
@@ -235,7 +235,7 @@ formHeader("Form: individual_treatment_plan");
                 <div class="col-md-2">
                 <input type="text" name="short_goal2_responsible" size="12" maxlength="50" value="">
                 </div>
-            </div>            
+            </div>
             <div class="row" style="margin-top: 10px;margin-bottom: 10px;">
                 <div class="col-md-1">
                     <label style="font-weight: bold;">Resolved Date:</label>
@@ -251,7 +251,7 @@ formHeader("Form: individual_treatment_plan");
                 </div>
             </div>
             <br>
-            
+
             <hr>
             <div class="row" style="margin-top: 10px;margin-bottom: 10px;">
                 <div class="col-md-2">
@@ -313,7 +313,7 @@ formHeader("Form: individual_treatment_plan");
                 <div class="col-md-2">
                 <input type="text" name="short_goal3_responsible" size="12" maxlength="50" value="">
                 </div>
-            </div>            
+            </div>
             <div class="row" style="margin-top: 10px;margin-bottom: 10px;">
                 <div class="col-md-1">
                     <label style="font-weight: bold;">Resolved Date:</label>

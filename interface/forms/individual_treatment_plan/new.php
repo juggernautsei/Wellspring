@@ -343,6 +343,7 @@ formHeader("Form: individual_treatment_plan");
                         <td><input type="radio" name="tx_plan_parent" value="yes"> Yes</td>
                     </tr>
                     <tr>
+                        <td></td>
                         <td>(Must be sent to DCFS caseworker within 15 days of completion)</td>
                     </tr>
                 </table>

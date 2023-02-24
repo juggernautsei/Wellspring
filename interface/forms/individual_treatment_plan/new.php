@@ -347,8 +347,8 @@ formHeader("Form: individual_treatment_plan");
                     </tr>
                     <tr>
                         <td></td>
-                        <td>(Must be sent to DCFS caseworker within 15 days of completion)</td>
                         <td></td>
+                        <td>(Must be sent to DCFS caseworker within 15 days of completion)</td>
                     </tr>
                 </table>
 

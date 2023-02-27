@@ -48,7 +48,7 @@ formHeader("Form: individual_treatment_plan");
     <div class="container">
         <form method=post action="<?php echo $rootdir; ?>/forms/individual_treatment_plan/save.php?mode=new" name="my_form">
             <br />
-            <center><h2><span class="title"> Individual Treatment Plan </h2></center><br>
+            <center><h2> Individual Treatment Plan </h2></center><br>
             <br />
 
             <?php $res = sqlStatement("SELECT fname,mname,lname,ss,street,city,state,postal_code,phone_home,DOB FROM patient_data WHERE pid = ?", array($pid));

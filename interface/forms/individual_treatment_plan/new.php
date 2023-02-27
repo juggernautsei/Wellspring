@@ -342,7 +342,7 @@ formHeader("Form: individual_treatment_plan");
                     </tr>
                     <tr>
                         <td>Consulted caseworker on Tx plan review: </td>
-                        <td><input type="radio" name="tx_plan_parent" value="yes"> Yes</td>
+                        <td><input type="radio" name="txplan_review" value="yes"> Yes</td>
                         <td>Copy sent to DCFS: <input class='datepicker' type="text" name="dcsf_date_sent" value="" ></td>
                     </tr>
                     <tr>

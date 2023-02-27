@@ -4,7 +4,7 @@ require_once("../../globals.php");
 require_once("$srcdir/api.inc");
 require_once("$srcdir/forms.inc");
 
-
+die(' New Fields are not being saved yet. Check back. This message will be removed when the save works. ');
 
 if ($encounter == "") {
     $encounter = date("Ymd");
@@ -35,7 +35,7 @@ short_goal1_frequency = ?,
 short_goal1_duration = ?,
 short_goal1_responsible = ?,
 short_goal1_resolved = ?,
-short_goal1_discontinued = ?,                                          
+short_goal1_discontinued = ?,
 short_goal2_date = ?,
 short_term_goals_2 = ?,
 short_goal2_current_behave = ?,
@@ -59,7 +59,8 @@ short_goal3_frequency = ?,
 short_goal3_duration = ?,
 short_goal3_responsible = ?,
 short_goal3_resolved = ?,
-short_goal3_discontinued = ? 
+short_goal3_discontinued = ?,
+consulted = ?
 where id = ?", array(
         $_SESSION["pid"],
         $_SESSION["authProvider"],
@@ -109,6 +110,7 @@ where id = ?", array(
         $_POST["short_goal3_responsible"],
         $_POST["short_goal3_resolved"],
         $_POST["short_goal3_discontinued"],
+        $
         $_GET["id"])
     );
 }

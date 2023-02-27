@@ -64,7 +64,7 @@ formHeader("Form: individual_treatment_plan");
             </div>
             <div class="row" style="margin-top: 10px;margin-bottom: 10px;">
                 <div class="col-md-2">
-                    <label style="font-weight: bold;">Client Name:</label>
+                    <label style="font-weight: bold;">Client Name:</label></center>
                 </div>
                 <div class="col-md-10">
                     <label><?php echo text($result['fname']) . '&nbsp' . text($result['mname']) . '&nbsp;' . text($result['lname']); ?></label>

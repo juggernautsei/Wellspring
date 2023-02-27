@@ -336,7 +336,7 @@ formHeader("Form: individual_treatment_plan");
                     <tr>
                         <td>Consulted / reviewed the Tx plan review with parent/guardian: </td>
                         <td><input type="radio" name="tx_plan_parent" value="yes"> Yes <input type="radio" name="tx_plan_parent" value="no"> No</td>
-                        <td>If no please explain: <input size="40" type="text" name="txplanchild" value=""></td>
+                        <td>If no please explain: <input size="40" type="text" name="txplanparent" value=""></td>
                     </tr>
                     <tr>
                         <td>Consulted caseworker on Tx plan review: </td>
@@ -349,7 +349,6 @@ formHeader("Form: individual_treatment_plan");
                         <td><strong>(Must be sent to DCFS caseworker within 15 days of completion)</strong></td>
                     </tr>
                 </table>
-
             </div>
             <br>
 

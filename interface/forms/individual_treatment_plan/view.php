@@ -213,7 +213,7 @@ $obj = formFetch("form_individual_treatment_plan", $_GET["id"]);
                 <div class="col-md-2">
                 <input type="text" name="short_goal2_responsible" size="12" maxlength="10" value="<?php echo attr($obj['short_goal2_responsible']);  ?>">
                 </div>
-            </div>            
+            </div>
             <div class="row" style="margin-top: 10px;margin-bottom: 10px;">
                 <div class="col-md-1">
                     <label style="font-weight: bold;">Resolved Date:</label>
@@ -229,7 +229,7 @@ $obj = formFetch("form_individual_treatment_plan", $_GET["id"]);
                 </div>
             </div>
             <br>
-            
+
             <hr>
             <div class="row" style="margin-top: 10px;margin-bottom: 10px;">
                 <div class="col-md-2">
@@ -291,7 +291,7 @@ $obj = formFetch("form_individual_treatment_plan", $_GET["id"]);
                 <div class="col-md-2">
                 <input type="text" name="short_goal3_responsible" size="12" maxlength="10" value="<?php echo attr($obj['short_goal3_responsible']);  ?>">
                 </div>
-            </div>            
+            </div>
             <div class="row" style="margin-top: 10px;margin-bottom: 10px;">
                 <div class="col-md-1">
                     <label style="font-weight: bold;">Resolved Date:</label>
@@ -305,6 +305,30 @@ $obj = formFetch("form_individual_treatment_plan", $_GET["id"]);
                 <div class="col-md-2">
                 <input type="text" name="short_goal3_discontinued" size="12" maxlength="10" value="<?php echo attr($obj['short_goal3_discontinued']);  ?>">
                 </div>
+            </div>
+            <div class="row" style="margin-top: 10px;margin-bottom: 10px;">
+                <table cellpadding="12px" class="table">
+                    <tr>
+                        <td>Consulted / reviewed the Tx plan review with child: </td>
+                        <td><input type="radio" name="tx_plan_child" value="yes"> Yes <input type="radio" name="tx_plan_child" value="no"> No</td>
+                        <td>If no please explain: <input size="40" type="text" name="txplanchild" value=""></td>
+                    </tr>
+                    <tr>
+                        <td>Consulted / reviewed the Tx plan review with parent/guardian: </td>
+                        <td><input type="radio" name="tx_plan_parent" value="yes"> Yes <input type="radio" name="tx_plan_parent" value="no"> No</td>
+                        <td>If no please explain: <input size="40" type="text" name="txplanparent" value=""></td>
+                    </tr>
+                    <tr>
+                        <td>Consulted caseworker on Tx plan review: </td>
+                        <td><input type="radio" name="txplan_review" value="yes"> Yes</td>
+                        <td>Copy sent to DCFS: <input class='datepicker' type="text" name="dcsf_date_sent" value="" ></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><strong>(Must be sent to DCFS caseworker within 15 days of completion)</strong></td>
+                    </tr>
+                </table>
             </div>
             <br>
 

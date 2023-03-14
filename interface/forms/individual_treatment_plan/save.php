@@ -5,7 +5,15 @@ require_once("$srcdir/api.inc");
 require_once("$srcdir/forms.inc");
 
 echo "<pre>";
-var_dump($_POST);
+$endData = [];
+$endData["tx_plan_child"] = $_POST["tx_plan_child"];
+$endData["txplanchild"] = $_POST["txplanchild"];
+$endData["tx_plan_parent"] = $_POST["tx_plan_parent"];
+$endData["txplanparent"] = $_POST["txplanparent"];
+$endData["txplan_review"] = $_POST["txplan_review"];
+$endData["dcsf_date_sent"] = $_POST["dcsf_date_sent"];
+$saveEndData = json_encode($endData);
+var_dump($saveEndData);
 die();
 
 if ($encounter == "") {

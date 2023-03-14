@@ -126,7 +126,7 @@ where id = ?", array(
 
 function miscDataSave($id, $data)
 {
-    $sql = "UPDATE `form_individual_treament_plan` SET `misc_data` = ? WHERE `id` = ? ";
+    $sql = "UPDATE `form_individual_treatment_plan` SET `misc_data` = ? WHERE `id` = ? ";
     sqlStatement($sql, [$data, $id]);
 }
 

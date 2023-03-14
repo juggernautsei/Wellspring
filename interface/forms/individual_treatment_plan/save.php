@@ -123,7 +123,6 @@ where id = ?", array(
         $_POST["dcsf_date_sent"],
         $_GET["id"])
     );
-    miscDataSave($_GET["id"], $saveEndData);
 }
 
 

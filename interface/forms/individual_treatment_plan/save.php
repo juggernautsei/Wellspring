@@ -4,6 +4,7 @@ require_once("../../globals.php");
 require_once("$srcdir/api.inc");
 require_once("$srcdir/forms.inc");
 
+echo "<pre>";
 var_dump($_POST);
 die();
 

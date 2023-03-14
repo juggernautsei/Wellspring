@@ -69,8 +69,7 @@ short_goal3_frequency = ?,
 short_goal3_duration = ?,
 short_goal3_responsible = ?,
 short_goal3_resolved = ?,
-short_goal3_discontinued = ?,
-consulted = ?
+short_goal3_discontinued = ?
 where id = ?", array(
         $_SESSION["pid"],
         $_SESSION["authProvider"],

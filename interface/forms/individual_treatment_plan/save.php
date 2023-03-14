@@ -13,8 +13,7 @@ $endData["txplanparent"] = $_POST["txplanparent"];
 $endData["txplan_review"] = $_POST["txplan_review"];
 $endData["dcsf_date_sent"] = $_POST["dcsf_date_sent"];
 $saveEndData = json_encode($endData);
-var_dump($saveEndData);
-die();
+
 
 if ($encounter == "") {
     $encounter = date("Ymd");
@@ -24,7 +23,7 @@ if ($_GET["mode"] == "new") {
     $newid = formSubmit("form_individual_treatment_plan", $_POST, $_GET["id"], $userauthorized);
 
     addForm($encounter, "Individual Treatment Plan", $newid, "individual_treatment_plan", $pid, $userauthorized);
-
+    miscDataSave($newid, $saveEndData);
 } elseif ($_GET["mode"] == "update") {
     sqlStatement("update form_individual_treatment_plan set pid = ?, groupname = ?, user = ?, authorized = ?, activity=1, date = NOW(),
 date_of_referal = ?,
@@ -121,9 +120,15 @@ where id = ?", array(
         $_POST["short_goal3_responsible"],
         $_POST["short_goal3_resolved"],
         $_POST["short_goal3_discontinued"],
-        $
         $_GET["id"])
     );
+    miscDataSave($_GET["id"], $saveEndData);
+}
+
+function miscDataSave($id, $data)
+{
+    $sql = "UPDATE `form_individual_treament_plan` SET `misc_data` = ? WHERE `id` = ? ";
+    sqlStatement($sql, [$data, $id]);
 }
 
 formHeader("Redirecting....");

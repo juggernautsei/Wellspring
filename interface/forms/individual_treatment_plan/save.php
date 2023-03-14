@@ -65,7 +65,7 @@ consult_txplanchild_explain = ?,
 consult_tx_plan_parent = ?,
 consult_txplanparent_explain = ?,
 consult_txplan_review_sent = ?,
-dcsf_date_sent = ?,
+dcsf_date_sent = ?
 where id = ?", array(
         $_SESSION["pid"],
         $_SESSION["authProvider"],

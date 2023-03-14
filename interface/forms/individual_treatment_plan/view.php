@@ -331,7 +331,10 @@ $obj = formFetch("form_individual_treatment_plan", $_GET["id"]);
                         <td>Consulted caseworker on Tx plan review: </td>
                         <td><input type="radio" name="consult_txplan_review_sent" value="yes" selected> Yes
                         </td>
-                        <td>Copy sent to DCFS: <input class='datepicker' type="text" name="dcsf_date_sent" value="" ></td>
+                        <td>Copy sent to DCFS:
+                            <input class='datepicker' type="text" name="dcsf_date_sent"
+                                                      value="<?php echo attr($obj['dcsf_date_sent']);  ?>" >
+                        </td>
                     </tr>
                     <tr>
                         <td></td>

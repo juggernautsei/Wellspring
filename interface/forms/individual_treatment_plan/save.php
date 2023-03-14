@@ -4,7 +4,8 @@ require_once("../../globals.php");
 require_once("$srcdir/api.inc");
 require_once("$srcdir/forms.inc");
 
-die(' New Fields are not being saved yet. Check back. This message will be removed when the save works. ');
+var_dump($_POST);
+die();
 
 if ($encounter == "") {
     $encounter = date("Ymd");
@@ -14,6 +15,7 @@ if ($_GET["mode"] == "new") {
     $newid = formSubmit("form_individual_treatment_plan", $_POST, $_GET["id"], $userauthorized);
 
     addForm($encounter, "Individual Treatment Plan", $newid, "individual_treatment_plan", $pid, $userauthorized);
+
 } elseif ($_GET["mode"] == "update") {
     sqlStatement("update form_individual_treatment_plan set pid = ?, groupname = ?, user = ?, authorized = ?, activity=1, date = NOW(),
 date_of_referal = ?,

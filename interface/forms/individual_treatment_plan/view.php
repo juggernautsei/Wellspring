@@ -335,7 +335,7 @@ $obj = formFetch("form_individual_treatment_plan", $_GET["id"]);
                     <tr>
                         <td>Consulted caseworker on Tx plan review: </td>
                         <td><input type="radio" name="consult_txplan_review_sent" value="yes"
-                                   <?php if($obj['dcsf_date_sent'] == 'yes') echo "checked" ?>> Yes
+                                   <?php if($obj['consult_txplan_review_sent'] == 'yes') echo "checked" ?>> Yes
                         </td>
                         <td>Copy sent to DCFS:
                             <input class='datepicker' type="text" name="dcsf_date_sent"

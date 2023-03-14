@@ -311,16 +311,21 @@ $obj = formFetch("form_individual_treatment_plan", $_GET["id"]);
                     <tr>
                         <td>Consulted / reviewed the Tx plan review with child: </td>
                         <td>
-                            <input type="radio" name="consult_tx_plan_child" value="yes"> Yes
-                            <input type="radio" name="consult_tx_plan_child" value="no"> No</td>
+                            <input type="radio" name="consult_tx_plan_child" value="yes"
+                                <?php if($obj['consult_tx_plan_child'] == 'yes') echo "checked" ?>> Yes
+                            <input type="radio" name="consult_tx_plan_child" value="no"
+                                <?php if($obj['consult_tx_plan_child'] == 'no') echo "checked" ?>> No
+                        </td>
                         <td>If no please explain: <input size="40" type="text" name="consult_txplanchild_explain"
                                                          value="<?php echo attr($obj['consult_txplanchild_explain']);  ?>">
                         </td>
                     </tr>
                     <tr>
                         <td>Consulted / reviewed the Tx plan review with parent/guardian: </td>
-                        <td><input type="radio" name="consult_tx_plan_parent" value="yes"> Yes
-                            <input type="radio" name="consult_tx_plan_parent" value="no"> No
+                        <td><input type="radio" name="consult_tx_plan_parent" value="yes"
+                                <?php if($obj['consult_tx_plan_parent'] == 'yes') echo "checked" ?>> Yes
+                            <input type="radio" name="consult_tx_plan_parent" value="no"
+                                <?php if($obj['consult_tx_plan_parent'] == 'no') echo "checked" ?>> No
                         </td>
                         <td>If no please explain:
                             <input size="40" type="text" name="consult_txplanparent_explain"
@@ -329,7 +334,8 @@ $obj = formFetch("form_individual_treatment_plan", $_GET["id"]);
                     </tr>
                     <tr>
                         <td>Consulted caseworker on Tx plan review: </td>
-                        <td><input type="radio" name="consult_txplan_review_sent" value="yes" checked> Yes
+                        <td><input type="radio" name="consult_txplan_review_sent" value="yes"
+                                   <?php if($obj['dcsf_date_sent'] == 'yes') echo "checked" ?>> Yes
                         </td>
                         <td>Copy sent to DCFS:
                             <input class='datepicker' type="text" name="dcsf_date_sent"

@@ -4,16 +4,6 @@ require_once("../../globals.php");
 require_once("$srcdir/api.inc");
 require_once("$srcdir/forms.inc");
 
-echo "<pre>";
-$endData = [];
-$endData["tx_plan_child"] = $_POST["tx_plan_child"];
-$endData["txplanchild"] = $_POST["txplanchild"];
-$endData["tx_plan_parent"] = $_POST["tx_plan_parent"];
-$endData["txplanparent"] = $_POST["txplanparent"];
-$endData["txplan_review"] = $_POST["txplan_review"];
-$endData["dcsf_date_sent"] = $_POST["dcsf_date_sent"];
-$saveEndData = json_encode($endData);
-
 
 if ($encounter == "") {
     $encounter = date("Ymd");
@@ -23,7 +13,7 @@ if ($_GET["mode"] == "new") {
     $newid = formSubmit("form_individual_treatment_plan", $_POST, $_GET["id"], $userauthorized);
 
     addForm($encounter, "Individual Treatment Plan", $newid, "individual_treatment_plan", $pid, $userauthorized);
-    miscDataSave($newid, $saveEndData);
+
 } elseif ($_GET["mode"] == "update") {
     sqlStatement("update form_individual_treatment_plan set pid = ?, groupname = ?, user = ?, authorized = ?, activity=1, date = NOW(),
 date_of_referal = ?,
@@ -69,7 +59,13 @@ short_goal3_frequency = ?,
 short_goal3_duration = ?,
 short_goal3_responsible = ?,
 short_goal3_resolved = ?,
-short_goal3_discontinued = ?
+short_goal3_discontinued = ?,
+consult_tx_plan_child = ?,
+consult_txplanchild_explain = ?,
+consult_tx_plan_parent = ?,
+consult_txplanparent_explain = ?,
+consult_txplan_review_sent = ?,
+dcsf_date_sent = ?,
 where id = ?", array(
         $_SESSION["pid"],
         $_SESSION["authProvider"],
@@ -119,16 +115,17 @@ where id = ?", array(
         $_POST["short_goal3_responsible"],
         $_POST["short_goal3_resolved"],
         $_POST["short_goal3_discontinued"],
+        $_POST["consult_tx_plan_child"],
+        $_POST["consult_txplanchild_explain"],
+        $_POST["consult_tx_plan_parent"],
+        $_POST["consult_txplanparent_explain"],
+        $_POST["consult_txplan_review_sent"],
+        $_POST["dcsf_date_sent"],
         $_GET["id"])
     );
     miscDataSave($_GET["id"], $saveEndData);
 }
 
-function miscDataSave($id, $data)
-{
-    $sql = "UPDATE `form_individual_treatment_plan` SET `misc_data` = ? WHERE `id` = ? ";
-    sqlStatement($sql, [$data, $id]);
-}
 
 formHeader("Redirecting....");
 formJump();

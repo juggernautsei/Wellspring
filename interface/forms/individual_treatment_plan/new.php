@@ -330,13 +330,19 @@ formHeader("Form: individual_treatment_plan");
                 <table cellpadding="12px" class="table">
                     <tr>
                         <td>Consulted / reviewed the Tx plan review with child: </td>
-                        <td><input type="radio" name="consult_tx_plan_child" value="yes"> Yes <input type="radio" name="consult_tx_plan_child" value="no"> No</td>
-                        <td>If no please explain: <input size="40" type="text" name="consult_txplanchild_explain" value=""></td>
+                        <td>
+                            <input type="radio" name="consult_tx_plan_child" value="yes"> Yes
+                            <input type="radio" name="consult_tx_plan_child" value="no"> No</td>
+                        <td>If no please explain:
+                            <input size="40" type="text" name="consult_txplanchild_explain" value="">
+                        </td>
                     </tr>
                     <tr>
                         <td>Consulted / reviewed the Tx plan review with parent/guardian: </td>
-                        <td><input type="radio" name="consult_tx_plan_parent" value="yes"> Yes <input type="radio" name="consult_tx_plan_parent" value="no"> No</td>
-                        <td>If no please explain: <input size="40" type="text" name="consult_txplanparent_explain" value=""></td>
+                        <td><input type="radio" name="consult_tx_plan_parent" value="yes"> Yes
+                            <input type="radio" name="consult_tx_plan_parent" value="no"> No</td>
+                        <td>If no please explain:
+                            <input size="40" type="text" name="consult_txplanparent_explain" value=""></td>
                     </tr>
                     <tr>
                         <td>Consulted caseworker on Tx plan review: </td>
